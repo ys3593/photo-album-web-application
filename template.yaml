@@ -2,6 +2,19 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: SAM Template for Lambda
 
+Metadata:
+  AWS::ServerlessRepo::Application:
+    Name: my-app
+    Description: "SAM Template for Lambda"
+    Author: user1
+    SpdxLicenseId: Apache-2.0
+    LicenseUrl: LICENSE.txt
+    ReadmeUrl: README.md
+    Labels: ['tests']
+    HomePageUrl: https://github.com/ys3593/Photo-Album-Web-Application
+    SemanticVersion: 0.0.1
+    SourceCodeUrl: https://github.com/ys3593/Photo-Album-Web-Application
+
 Resources:
   searchphotos:
     Type: "AWS::Serverless::Function"
@@ -32,4 +45,5 @@ Resources:
 
 
 
-   
+
+
