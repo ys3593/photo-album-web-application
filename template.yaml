@@ -1,0 +1,35 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: SAM Template for Lambda
+
+Resources:
+  searchphotos:
+    Type: "AWS::Serverless::Function"
+    Properties:
+      FunctionName: search-photos
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.9
+      CodeUri: ./search-photos
+      Description: "SAM Template for Lambda"
+      MemorySize: 128
+      Timeout: 30
+      Environment:
+        Variables:
+          REGION: us-east-1
+  indexphotos:
+    Type: "AWS::Serverless::Function"
+    Properties:
+      FunctionName: index-photos
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.9
+      CodeUri: ./index-photos
+      Description: "SAM Template for Lambda"
+      MemorySize: 128
+      Timeout: 30
+      Environment:
+        Variables:
+          REGION: us-east-1
+
+
+
+   
