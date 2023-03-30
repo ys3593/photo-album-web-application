@@ -4,7 +4,7 @@ Description: SAM Template for Lambda
 
 Metadata:
   AWS::ServerlessRepo::Application:
-    Name: my-app
+    Name: my-app-lambda
     Description: "SAM Template for Lambda"
     Author: user1
     SpdxLicenseId: Apache-2.0
